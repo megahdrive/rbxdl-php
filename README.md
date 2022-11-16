@@ -1,6 +1,6 @@
 # rbxdl-php
-A server-side Roblox asset downloader for php  
-I really liked [Modnark's ROBLOX asset downloader](https://github.com/Modnark/rbxdl) so I decided to make my own that runs on the web server.  
+Rbxdl-php is a server-side asset downloader for Roblox, written in PHP.
+I really liked [Modnark's ROBLOX asset downloader](https://github.com/Modnark/rbxdl) so I decided to make my own that can run natively along with my other PHP code.  
 ## Examples
 ```php
 $rbxdl = new Rbxdl("/xml");
