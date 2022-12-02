@@ -10,6 +10,7 @@ $rbxdl = new Rbxdl("/xml");
 // getAssetData does this automatically, but won't give you a boolean. This does.
 $doesHatExist = $rbxdl->doesAssetExist(21681881);
 $data = $rbxdl->getAssetData(21681881);
-// Returns true if success. downloadAsset automatically saves as XML.
-$download = $rbxdl->downloadAsset(21681881, "hat");
+// Downloads an asset onto the drive in the XML directory and names it hat.
+// If the download fails for any reason, Rbxdl will throw an exception.
+$rbxdl->downloadAsset(21681881, "hat");
 ```
