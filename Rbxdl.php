@@ -63,13 +63,12 @@ class Rbxdl {
         if ($this->doesAssetExist($assetId)) {
             $assetType = json_decode($this->getAssetData($assetId))->AssetTypeId;
             if (array_key_exists($assetType, $extensions)) {
-                if (file_put_contents($_SERVER["DOCUMENT_ROOT"] . $this->store . "\\" . $storeName . "." . $extensions[$assetType], file_get_contents($api . $assetId))) {
-                    return true;
-                }
-                return false;
+                file_put_contents($_SERVER["DOCUMENT_ROOT"] . $this->store . "\\" . $storeName . "." . $extensions[$assetType], file_get_contents($api . $assetId))
+            } else {
+                throw new Exception("Asset type does not exist or is unsupported");
             }
-            return false;
+        } else {
+            throw new Exception("Asset " . $assetId . "does not exist");
         }
-        return false;
     }
 }
