@@ -1,6 +1,6 @@
 <?php
 
-$extensions = define("extensions", [
+$extensions = [
     0 => "",
     1 => "png",
     2 => "xml",
@@ -16,9 +16,8 @@ $extensions = define("extensions", [
     17 => "xml",
     18 => "xml",
     19 => "xml"
-], false);
+];
 
-$extensions = extensions;
 $api = "https://assetdelivery.roblox.com/v1/asset?id=";
 $market_api = "https://api.roblox.com/marketplace/productinfo?assetId=";
 
